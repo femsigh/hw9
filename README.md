@@ -27,7 +27,7 @@
 
 MDN Web Docs for reference.
 
-## Documentation Links
+### Documentation Links
 
 ### Part 1: Date Display
 
