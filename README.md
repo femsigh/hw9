@@ -17,6 +17,7 @@
 ## Reflections
 
 - **Hardest:** Understanding why `NaN === NaN` is false and why `Number.isNaN()` is necessary.
+- **Medium:** It was fun, but learning the hierarchy rules of the markdown system lol
 - **Easiest:** Formatting the date with `padStart()` was simple once I remembered to convert numbers to strings.
 - **What's new for me:** Months are 0-indexed, so you must add 1 to get the real month number.
 - **Number object:** `Number.isInteger()` correctly returns `false` for decimals like `19.75`. Also, non‑numeric strings become `NaN`.
