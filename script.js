@@ -123,9 +123,9 @@ const mathOutput = `<p>Item price: $${itemPrice.toFixed(2)}</p>
                     <p>Quantity: ${quantity}</p>
                     <p>Subtotal: $${subtotal.toFixed(2)}</p>
                     <p>Tax (8%): $${tax.toFixed(2)}</p>
-                    <p><strong>Total cost: $${formattedTotal}</strong></p>`;
+                    <p><strong>Total cost: $${formattedTotal}</strong></p>`; // Insert the math output into the page
 
-document.getElementById("mathOutput").innerHTML = mathOutput;
+document.getElementById("mathOutput").innerHTML = mathOutput; // Insert the math output into the page
 
 // ==========================
 // Part 4: Conditionals
@@ -136,19 +136,18 @@ document.getElementById("mathOutput").innerHTML = mathOutput;
 //
 
 // First if/else: Check if total is greater than $50
-if (total > 50) {
+if (total > 50) { // If total is greater than $50, show a free shipping message
   // Add an extra message to the math section
-  const freeShippingMsg = document.createElement("p");
+  const freeShippingMsg = document.createElement("p"); 
   freeShippingMsg.textContent = "You get free shipping!";
   freeShippingMsg.style.color = "green";
   freeShippingMsg.style.fontWeight = "bold";
-  document.getElementById("mathOutput").appendChild(freeShippingMsg);
-} else {
-  const noShippingMsg = document.createElement("p");
-  noShippingMsg.textContent =
-    "Add $" + (50 - total).toFixed(2) + " more to get free shipping.";
+  document.getElementById("mathOutput").appendChild(freeShippingMsg); // document.getElementById is used to find the mathOutput section and append the free shipping message to it
+  const noShippingMsg = document.createElement("p"); // Create a message element
+  noShippingMsg.textContent = // Calculate how much more is needed for free shipping
+    "Add $" + (50 - total).toFixed(2) + " more to get free shipping."; 
   noShippingMsg.style.color = "orange";
-  document.getElementById("mathOutput").appendChild(noShippingMsg);
+  document.getElementById("mathOutput").appendChild(noShippingMsg);// Append the message to the math output section
 }
 
 // Ideas:
@@ -160,15 +159,15 @@ if (total > 50) {
 //    (append it to an existing section or create a new message)
 
 // Second if/else: Check if the value "hello" converted to NaN (from part 2)
-const testConvert = Number(value3); // "hello" -> not a valid number.
-if (Number.isNaN(testConvert)) {
-  const warningMsg = document.createElement("p");
-  warningMsg.textContent = 'Tip: "hello" is not a valid number.';
+const testConvert = Number(value3); // "hello" -> not a valid number. // This will be NaN, so we can check that condition.
+if (Number.isNaN(testConvert)) { // If it is NaN, show a warning message about invalid number
+  const warningMsg = document.createElement("p"); // Create a warning message element
+  warningMsg.textContent = 'Hint Hint: "hello" is not a valid number.';
   warningMsg.style.color = "red";
-  document.getElementById("numberConversionOutput").appendChild(warningMsg);
+  document.getElementById("numberConversionOutput").appendChild(warningMsg); // Append the warning message to the number conversion output section
 } else {
   // This won't run because it is NaN, but added to make sense with the structure
-  const successMsg = document.createElement("p");
+  const successMsg = document.createElement("p"); 
   successMsg.textContent = "✓ All values are valid numbers.";
-  document.getElementById("numberConversionOutput").appendChild(successMsg);
+  document.getElementById("numberConversionOutput").appendChild(successMsg); // Append the message to the number conversion output section
 }
